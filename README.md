@@ -39,8 +39,8 @@ modifier paidEnough(uint _price) {
 }
 
 // Define a modifier that checks the price and refunds the remaining balance
-modifier checkValue(uint _upc, address payable addressToFund) { // ADDED address payable
-  uint _price = items[_upc].productPrice;
+modifier checkValue(uint _productCode, address payable addressToFund) { // ADDED address payable
+  uint _price = items[_productCode].productPrice;
   uint  amountToReturn = msg.value - _price;
   addressToFund.transfer(amountToReturn);
   _;
@@ -51,69 +51,69 @@ modifier checkValue(uint _upc, address payable addressToFund) { // ADDED address
 
 ```solidity
 // itemState : 0
-modifier producedByFarmer(uint _upc) {
-  require(items[_upc].itemState == State.ProduceByFarmer);
+modifier producedByFarmer(uint _productCode) {
+  require(items[_productCode].itemState == State.ProduceByFarmer);
   _;
 }
 // State : 1
-modifier forSaleByFarmer(uint _upc) {
-  require(items[_upc].itemState == State.ForSaleByFarmer);
+modifier forSaleByFarmer(uint _productCode) {
+  require(items[_productCode].itemState == State.ForSaleByFarmer);
   _;
 }
 // State : 2
-modifier purchasedByDistributor(uint _upc) {
-  require(items[_upc].itemState == State.PurchasedByDistributor);
+modifier purchasedByDistributor(uint _productCode) {
+  require(items[_productCode].itemState == State.PurchasedByDistributor);
   _;
 }
 // State : 3
-modifier shippedByFarmer(uint _upc) {
-  require(items[_upc].itemState == State.ShippedByFarmer);
+modifier shippedByFarmer(uint _productCode) {
+  require(items[_productCode].itemState == State.ShippedByFarmer);
   _;
 }
 // State : 4
-modifier receivedByDistributor(uint _upc) {
-  require(items[_upc].itemState == State.ReceivedByDistributor);
+modifier receivedByDistributor(uint _productCode) {
+  require(items[_productCode].itemState == State.ReceivedByDistributor);
   _;
 }
 // State : 5
-modifier processByDistributor(uint _upc) {
-  require(items[_upc].itemState == State.ProcessedByDistributor);
+modifier processByDistributor(uint _productCode) {
+  require(items[_productCode].itemState == State.ProcessedByDistributor);
   _;
 }
 // State : 6
-modifier packagedByDistributor(uint _upc) {
-  require(items[_upc].itemState == State.PackageByDistributor);
+modifier packagedByDistributor(uint _productCode) {
+  require(items[_productCode].itemState == State.PackageByDistributor);
   _;
 }
 // State : 7
-modifier forSaleByDistributor(uint _upc) {
-  require(items[_upc].itemState == State.ForSaleByDistributor);
+modifier forSaleByDistributor(uint _productCode) {
+  require(items[_productCode].itemState == State.ForSaleByDistributor);
   _;
 }
 
 // State : 8
-modifier shippedByDistributor(uint _upc) {
-  require(items[_upc].itemState == State.ShippedByDistributor);
+modifier shippedByDistributor(uint _productCode) {
+  require(items[_productCode].itemState == State.ShippedByDistributor);
   _;
 }
 // State : 9
-modifier purchasedByRetailer(uint _upc) {
-  require(items[_upc].itemState == State.PurchasedByRetailer);
+modifier purchasedByRetailer(uint _productCode) {
+  require(items[_productCode].itemState == State.PurchasedByRetailer);
   _;
 }
 // State : 10
-modifier receivedByRetailer(uint _upc) {
-  require(items[_upc].itemState == State.ReceivedByRetailer);
+modifier receivedByRetailer(uint _productCode) {
+  require(items[_productCode].itemState == State.ReceivedByRetailer);
   _;
 }
 // State : 11
-modifier forSaleByRetailer(uint _upc) {
-  require(items[_upc].itemState == State.ForSaleByRetailer);
+modifier forSaleByRetailer(uint _productCode) {
+  require(items[_productCode].itemState == State.ForSaleByRetailer);
   _;
 }
 // State : 12
-modifier purchasedByConsumer(uint _upc) {
-  require(items[_upc].itemState == State.PurchasedByConsumer);
+modifier purchasedByConsumer(uint _productCode) {
+  require(items[_productCode].itemState == State.PurchasedByConsumer);
   _;
 }
 ```
@@ -151,17 +151,17 @@ modifier onlyConsumer() {
 Each supplychain function emits its own event.
 
 ```solidity
-event ProduceByFarmer(uint upc);         //1
-event ForSaleByFarmer(uint upc);         //2
-event PurchasedByDistributor(uint upc);  //3
-event ShippedByFarmer(uint upc);         //4
-event ReceivedByDistributor(uint upc);   //5
-event ProcessedByDistributor(uint upc);  //6
-event PackagedByDistributor(uint upc);   //7
-event ForSaleByDistributor(uint upc);    //8
-event PurchasedByRetailer(uint upc);     //9
-event ShippedByDistributor(uint upc);    //10
-event ReceivedByRetailer(uint upc);      //11
-event ForSaleByRetailer(uint upc);       //12
-event PurchasedByConsumer(uint upc);     //13
+event ProduceByFarmer(uint productCode);         //1
+event ForSaleByFarmer(uint productCode);         //2
+event PurchasedByDistributor(uint productCode);  //3
+event ShippedByFarmer(uint productCode);         //4
+event ReceivedByDistributor(uint productCode);   //5
+event ProcessedByDistributor(uint productCode);  //6
+event PackagedByDistributor(uint productCode);   //7
+event ForSaleByDistributor(uint productCode);    //8
+event PurchasedByRetailer(uint productCode);     //9
+event ShippedByDistributor(uint productCode);    //10
+event ReceivedByRetailer(uint productCode);      //11
+event ForSaleByRetailer(uint productCode);       //12
+event PurchasedByConsumer(uint productCode);     //13
 ```
