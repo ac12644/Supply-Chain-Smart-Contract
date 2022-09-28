@@ -9,7 +9,7 @@
   <h3 align="center">Agriculture Supply Chain</h3>
 
   <p align="center">
-    This smart contract is designed to simplify the operation of the agricultural supply chain. It increases transparency, efficiency and privacy between farmer, distributor, retailer and consumer.
+    This smart contract is designed to simplify the operation of the agricultural supply chain. It increases transparency and efficiency between farmer, distributor, retailer and consumer.
   </p>
 </div>
 
