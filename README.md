@@ -6,8 +6,6 @@
     <img src="https://github.com/ac12644/Supply-Chain/blob/main/images/AgriChainLogo.png" alt="Logo" width="145" height="55">
   </a>
 
-  <h3 align="center">Food Supply Chain</h3>
-
   <p align="center">
     This smart contract is designed to simplify the operation of the agricultural supply chain. It increases transparency and efficiency between farmer, distributor, retailer and consumer.
   </p>
