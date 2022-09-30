@@ -3,7 +3,7 @@
 <br />
 <div align="center">
   <a href="#">
-    <img src="https://cdn-icons-png.flaticon.com/512/5341/5341391.png" alt="Logo" width="80" height="80">
+    <img src="https://github.com/ac12644/Supply-Chain/blob/main/images/AgriChain.png" alt="Logo" width="90" height="40">
   </a>
 
   <h3 align="center">Agriculture Supply Chain</h3>
@@ -12,6 +12,10 @@
     This smart contract is designed to simplify the operation of the agricultural supply chain. It increases transparency and efficiency between farmer, distributor, retailer and consumer.
   </p>
 </div>
+
+## About The Project
+
+![Flow diagram](https://github.com/ac12644/Supply-Chain/blob/main/images/food%20supply.jpeg)
 
 ### Specification
 
