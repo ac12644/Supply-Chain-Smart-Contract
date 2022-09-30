@@ -3,7 +3,7 @@
 <br />
 <div align="center">
   <a href="#">
-    <img src="https://github.com/ac12644/Supply-Chain/blob/main/images/AgriChain.png" alt="Logo" width="140" height="80">
+    <img src="https://github.com/ac12644/Supply-Chain/blob/main/images/AgriChainLogo.png" alt="Logo" width="120" height="40">
   </a>
 
   <h3 align="center">Food Supply Chain</h3>
