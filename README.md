@@ -5,6 +5,8 @@
   <a href="#">
     <img src="https://github.com/ac12644/Supply-Chain/blob/main/images/AgriChainLogo.png" alt="Logo" width="145" height="55">
   </a>
+  
+  <a href="#">Explore full article</a>
 
   <p align="center">
     This smart contract is designed to simplify the operation of the agricultural supply chain. It increases transparency and efficiency between farmer, distributor, retailer and consumer.
@@ -13,16 +15,52 @@
 
 ## About The Project
 
-![Flow diagram](https://github.com/ac12644/Supply-Chain/blob/main/images/food%20supply.jpeg)
+![Flow diagram](/images/flow.png)
+
+### ⚙️Functions:
+
+1. Farmer creates a product and lists it to be purchased by Distributor
+2. Farmer ships the product
+3. Distributor receives the product, process it, package it and put it on sale
+4. Retailer buys the product from Distributor
+5. Distributor ships the product to Retailer
+6. Retailer receives the product and put it on sale
+7. Consumer purchase the product
 
 ### To Do
+
 - Front end development(in process)
+
+### Installation
+
+\_Below are instructions to get started
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/ac12644/Supply-Chain.git
+   ```
+2. Install packages
+   ```sh
+   yarn
+   ```
+3. start truffle development nework
+   ```sh
+   truffle develop
+   ```
+4. test smart contracts
+   ```sh
+    $truffle(develop)> test
+   ```
+5. to deploy run
+   ```sh
+    $truffle(develop)> deploy
+   ```
 
 ### Specification
 
 ### Modifiers
 
-1. Checking ownership and values payed
+1. Checking ownership and values paid
 
 ```solidity
 // Define a modifer that checks to see if msg.sender == owner of the contract
