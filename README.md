@@ -37,6 +37,14 @@ In this project, I have taken a practical approach. The codes are designed to si
 
 - Front end development(in process)
 
+### Versions
+
+- Solidity ^0.8.0
+
+- Truffle: v5.5.23
+
+- Node: v16.17.0
+
 ### Installation
 
 \_Below are instructions to get started
