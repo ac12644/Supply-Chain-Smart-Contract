@@ -19,7 +19,7 @@ The agricultural industry is a major contributor to the global economy, with ove
 
 Blockchain technology creates a single source of truth. This is important for supply chains that involve multiple participants in a network who don't necessarily trust each other.
 
-In this project, I have taken a practical approach. The codes are designed to simplify the operation of the agricultural supply chain and can be modified easily based on needs and requirement. It increases transparency and efficiency between farmers, distributors, retailers and consumers. Below is given a flow diagram for supply chain:
+In this project, I have taken a practical approach. The codes are designed to simplify the operation of the agricultural supply chain and can be modified easily based on needs and requirement. Below is given a flow diagram for supply chain:
 
 ![Flow diagram](/images/flow.png)
 
