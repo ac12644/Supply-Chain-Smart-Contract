@@ -6,7 +6,7 @@
     <img src="https://github.com/ac12644/Supply-Chain/blob/main/images/AgriChainLogo.png" alt="Logo" width="145" height="55">
   </a>
   
-  <a href="#">Explore full article</a>
+  <a href="https://betterprogramming.pub/supply-chain-smart-contract-design-e0ae5071bcbe">Explore full article</a>
 
   <p align="center">
     This smart contract is designed to simplify the operation of the agricultural supply chain. It increases transparency and efficiency between farmer, distributor, retailer and consumer.
