@@ -6,13 +6,21 @@
   "scripts": {
     "compile": "hardhat compile",
     "test": "hardhat test",
+    "test:coverage": "hardhat coverage",
+    "test:gas": "REPORT_GAS=true hardhat test",
     "deploy": "hardhat run scripts/deploy.js",
     "deploy:localhost": "hardhat run scripts/deploy.js --network localhost",
     "deploy:amoy": "hardhat run scripts/deploy.js --network polygonAmoy",
     "deploy:polygon": "hardhat run scripts/deploy.js --network polygon",
     "deploy:mainnet": "hardhat run scripts/deploy.js --network mainnet",
     "node": "hardhat node",
-    "console": "hardhat console"
+    "console": "hardhat console",
+    "lint": "eslint . --ext .js,.ts",
+    "lint:fix": "eslint . --ext .js,.ts --fix",
+    "format": "prettier --write \"**/*.{js,ts,sol,json,md}\"",
+    "format:check": "prettier --check \"**/*.{js,ts,sol,json,md}\"",
+    "clean": "hardhat clean",
+    "size": "hardhat size-contracts"
   },
   "keywords": [
     "blockchain",
@@ -33,10 +41,18 @@
     "web3": "^1.8.0"
   },
   "devDependencies": {
-    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
     "@nomicfoundation/hardhat-ethers": "^3.0.0",
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.46.0",
+    "@typescript-eslint/parser": "^8.46.0",
+    "eslint": "^9.37.0",
     "ethers": "^6.15.0",
-    "hardhat": "^2.22.0"
+    "hardhat": "^2.22.0",
+    "hardhat-contract-sizer": "^2.10.1",
+    "hardhat-gas-reporter": "^2.3.0",
+    "prettier": "^3.6.2",
+    "prettier-plugin-solidity": "^2.1.0",
+    "solidity-coverage": "^0.8.16"
   },
   "engines": {
     "node": ">=16.17.0"
