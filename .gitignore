@@ -112,4 +112,4 @@ dist
 cache
 
 #Hardhat build
-build/contracts
+build/contracts.DS_Store
