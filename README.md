@@ -402,13 +402,13 @@ REPORT_GAS=true
 // Produce agricultural product
 await supplyChain.produceItemByFarmer(
   0, // productCode (auto-generated)
-  "QmHash123...", // IPFS hash for metadata
-  ethers.parseEther("0.1"), // price
+  'QmHash123...', // IPFS hash for metadata
+  ethers.parseEther('0.1'), // price
   Math.floor(Date.now() / 1000) + 86400 // shipping deadline
 );
 
 // List product for sale
-await supplyChain.sellItemByFarmer(productCode, ethers.parseEther("0.15"));
+await supplyChain.sellItemByFarmer(productCode, ethers.parseEther('0.15'));
 
 // Ship product after purchase
 await supplyChain.shippedItemByFarmer(productCode);
@@ -419,7 +419,7 @@ await supplyChain.shippedItemByFarmer(productCode);
 ```javascript
 // Purchase from farmer
 await supplyChain.purchaseItemByDistributor(productCode, {
-  value: ethers.parseEther("0.15"),
+  value: ethers.parseEther('0.15'),
 });
 
 // Receive and process product
@@ -428,7 +428,7 @@ await supplyChain.processedItemByDistributor(productCode, 5); // 5 slices
 await supplyChain.packageItemByDistributor(productCode);
 
 // Sell to retailer
-await supplyChain.sellItemByDistributor(productCode, ethers.parseEther("0.25"));
+await supplyChain.sellItemByDistributor(productCode, ethers.parseEther('0.25'));
 ```
 
 #### 3. **Retailer Operations**
@@ -436,12 +436,12 @@ await supplyChain.sellItemByDistributor(productCode, ethers.parseEther("0.25"));
 ```javascript
 // Purchase from distributor
 await supplyChain.purchaseItemByRetailer(productCode, {
-  value: ethers.parseEther("0.25"),
+  value: ethers.parseEther('0.25'),
 });
 
 // Receive and sell to consumer
 await supplyChain.receivedItemByRetailer(productCode);
-await supplyChain.sellItemByRetailer(productCode, ethers.parseEther("0.35"));
+await supplyChain.sellItemByRetailer(productCode, ethers.parseEther('0.35'));
 ```
 
 #### 4. **Consumer Operations**
@@ -449,7 +449,7 @@ await supplyChain.sellItemByRetailer(productCode, ethers.parseEther("0.35"));
 ```javascript
 // Purchase final product
 await supplyChain.purchaseItemByConsumer(productCode, {
-  value: ethers.parseEther("0.35"),
+  value: ethers.parseEther('0.35'),
 });
 ```
 
@@ -470,7 +470,7 @@ await supplyChain.createBatchOperation(productCodes);
 await reputation.addReview(
   farmerAddress,
   5, // 5-star rating
-  "Excellent quality produce!"
+  'Excellent quality produce!'
 );
 
 // Record successful transaction
@@ -483,8 +483,8 @@ await reputation.recordTransactionSuccess(farmerAddress);
 // Open dispute if needed
 await escrow.openDispute(
   escrowId,
-  "Product quality issue",
-  { value: ethers.parseEther("0.01") } // arbitration fee
+  'Product quality issue',
+  { value: ethers.parseEther('0.01') } // arbitration fee
 );
 
 // Resolve dispute (arbitrator only)
@@ -687,7 +687,6 @@ npx hardhat verify --network mumbai <CONTRACT_ADDRESS> <CONSTRUCTOR_ARGS>
 ### Test on Polygon Amoy
 
 1. **Add Amoy Network to MetaMask:**
-
    - Network Name: Polygon Amoy
    - RPC URL: https://rpc-amoy.polygon.technology/
    - Chain ID: 80002
@@ -695,7 +694,6 @@ npx hardhat verify --network mumbai <CONTRACT_ADDRESS> <CONSTRUCTOR_ARGS>
    - Block Explorer: https://amoy.polygonscan.com/
 
 2. **Get Testnet MATIC:**
-
    - Visit [Polygon Faucet](https://faucet.polygon.technology/)
    - Request Amoy testnet MATIC tokens
 
