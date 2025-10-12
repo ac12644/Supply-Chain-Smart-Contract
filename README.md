@@ -4,6 +4,7 @@
 [![Solidity](https://img.shields.io/badge/Solidity-^0.8.24-blue.svg)](https://soliditylang.org/)
 [![Hardhat](https://img.shields.io/badge/Hardhat-^2.22.0-yellow.svg)](https://hardhat.org/)
 [![OpenZeppelin](https://img.shields.io/badge/OpenZeppelin-^5.4.0-green.svg)](https://openzeppelin.com/)
+[![CI/CD](https://github.com/ac12644/Supply-Chain-Smart-Contract/actions/workflows/hardhat-test.yml/badge.svg)](https://github.com/ac12644/Supply-Chain-Smart-Contract/actions/workflows/hardhat-test.yml)
 
 > **A production-ready blockchain solution for agricultural supply chain management with comprehensive traceability, secure payments, and quality assurance.**
 
