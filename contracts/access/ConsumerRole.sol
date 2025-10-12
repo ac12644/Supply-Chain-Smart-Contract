@@ -2,7 +2,7 @@
 pragma solidity ^0.8.0;
 
 import "./Roles.sol";
-import "../utils/Context.sol";
+import "@openzeppelin/contracts/utils/Context.sol";
 
 // Define a contract 'ConsumerRole' to manage this role - add, remove, check
 contract ConsumerRole is Context {

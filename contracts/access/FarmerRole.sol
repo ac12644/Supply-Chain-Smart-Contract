@@ -2,7 +2,7 @@
 pragma solidity ^0.8.0;
 
 import "./Roles.sol";
-import "../utils/Context.sol";
+import "@openzeppelin/contracts/utils/Context.sol";
 
 // Define a contract 'FarmerRole' to manage this role - add, remove, check
 contract FarmerRole is Context {
@@ -22,7 +22,7 @@ contract FarmerRole is Context {
 
     // Define a modifier that checks to see if _msgSender() has the appropriate role
     modifier onlyFarmer() {
-        require(isFarmer(_msgSender()));
+        require(isFarmer(_msgSender()), "Only farmers can perform this action");
         _;
     }
 

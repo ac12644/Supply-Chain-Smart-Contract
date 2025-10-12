@@ -1,6 +1,44 @@
 {
+  "name": "supply-chain-smart-contract",
+  "version": "2.0.0",
+  "description": "Production-ready agricultural supply chain smart contract with escrow, reputation system, and advanced features",
+  "main": "index.js",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy": "hardhat run scripts/deploy.js",
+    "deploy:localhost": "hardhat run scripts/deploy.js --network localhost",
+    "deploy:amoy": "hardhat run scripts/deploy.js --network polygonAmoy",
+    "deploy:polygon": "hardhat run scripts/deploy.js --network polygon",
+    "deploy:mainnet": "hardhat run scripts/deploy.js --network mainnet",
+    "node": "hardhat node",
+    "console": "hardhat console"
+  },
+  "keywords": [
+    "blockchain",
+    "ethereum",
+    "smart-contracts",
+    "supply-chain",
+    "agriculture",
+    "escrow",
+    "reputation",
+    "openzeppelin",
+    "hardhat"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
   "dependencies": {
-    "@truffle/hdwallet-provider": "^2.0.16",
-    "dotenv": "^16.0.3"
+    "@openzeppelin/contracts": "^5.4.0",
+    "dotenv": "^16.0.3",
+    "web3": "^1.8.0"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@nomicfoundation/hardhat-ethers": "^3.0.0",
+    "ethers": "^6.15.0",
+    "hardhat": "^2.22.0"
+  },
+  "engines": {
+    "node": ">=16.17.0"
   }
 }

@@ -1,0 +1,10 @@
+{
+  "network": "polygonAmoy",
+  "chainId": 80002,
+  "contracts": {
+    "Escrow": "0x3F56D16dcDEE1221E447e8A1dC6C91f6d9DEc347",
+    "Reputation": "0xa19dEDA6c56d005eF24c21DE822Dd83b529D205b",
+    "SupplyChain": "0xb9e1c42741DE05e9957C50D52ded2f2A55843524"
+  },
+  "timestamp": "2025-10-11T22:15:33.207Z"
+}
